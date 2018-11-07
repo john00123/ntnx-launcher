@@ -1,0 +1,51 @@
+//Comment for compiler
+@import '../../_ntnx/variables';
+@import '../../_ntnx/mixins';
+html{
+  @include base;
+  background-color: $background-color-3;
+}
+
+.primary{ @include primary }
+.secondary{ @include secondary }
+.fw {width: 100%}
+
+body{
+  @include flex(flex-start, flex-start, column);
+  @include size(100%, 100%);
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+
+}
+
+.card-container{
+  @include size(auto, auto);
+  background-color: white;
+  @include flex(flex-start, center, column);
+  border-radius: 4px;
+  padding: 20px;
+  @include transition(all);
+  p{
+    min-height: 60px;
+  }
+}
+
+container{
+  @include grid(auto, 1020px, 0px);
+  margin: auto;
+  padding: 20px;
+}
+
+.section-group{
+  margin-bottom: 40px;
+}
+
+.card-header{
+  @include flex(flex-start, space-between, row);
+}
+
+.section{
+  @include grid(260px, 1fr, 20px);
+  @include transition(all);
+}
