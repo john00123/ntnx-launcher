@@ -23,14 +23,14 @@ const cardData= [{
   name:'Epoch',
   value:'4',
   icon:'1',
-  description: '',
+  description: 'Observability and Monitoring for Multi-Cloud Applications',
   state:'Inactive',
   section:'Services'},
 {
   name:'Beam',
   value:'5',
   icon:'1',
-  description: '',
+  description: 'Multi-Cloud Optimization to Reduce Cost & Enhance Cloud Security.',
   state:'Inactive',
   section:'Services'},
 {
@@ -100,7 +100,7 @@ function cardBlock(name, value, description, state, icon){
       </div>
 
 
-        <p>${description}</p>
+        <p data-type='alt'>${description}</p>
         ${state === 'Active' ? `<button class='primary fw'>Launch</button>`:
           `<button class='secondary fw'>Activate</button>`
         }
