@@ -27,6 +27,7 @@ header{
   top:0;
   left: 0;
   @include transition(all);
+  transition-duration: 300ms!important;
   svg{
     @include size(16px, auto);
     fill:$dark-grey-3;
