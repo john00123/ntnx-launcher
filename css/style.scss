@@ -46,14 +46,15 @@ header{
   border-radius: 4px;
   padding: 30px;
   @include transition(all);
-  p{
-    min-height: 60px;
+
+  &:hover{@include shadow();
+    cursor: pointer;
+    h3{color:$blue-1;}
   }
-  &:hover{@include shadow();}
 }
 
 container{
-  @include grid(auto, 1280px, 0px);
+  @include grid(auto, 980px, 0px);
   margin: auto;
   padding: 20px;
   margin-top: 60px;
@@ -65,15 +66,27 @@ container{
 
 .card-header{
   @include flex(center, center, column);
-  h1{margin: 10px 0;}
+  background-color: $light-blue-3;
+  height: 100px;
+  border-radius: 4px;
 }
 
 .card-title{
   text-overflow: ellipsis;
+  margin: 30px 0 0 0;
+  @include transition(all);
+}
+
+.card-title2{
+  color:red;
+  &::before{
+    content:'Launch';
+    display: inline-block;
+  }
 }
 
 .section{
-  @include grid(250px, 280px, 20px);
+  @include grid(280px, 1fr, 20px);
   @include transition(all);
   margin: auto;
 }

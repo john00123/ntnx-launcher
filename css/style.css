@@ -246,17 +246,18 @@ header svg {
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.card-container p {
-  min-height: 60px;
-}
-
 .card-container:hover {
   box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.02), 0 3px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 1px 0 rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+}
+
+.card-container:hover h3 {
+  color: #22A5F7;
 }
 
 container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 1280px));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 980px));
   grid-gap: 0px;
   margin: auto;
   padding: 20px;
@@ -272,19 +273,29 @@ container {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.card-header h1 {
-  margin: 10px 0;
+  background-color: #e9f6fe;
+  height: 100px;
+  border-radius: 4px;
 }
 
 .card-title {
   text-overflow: ellipsis;
+  margin: 30px 0 0 0;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card-title2 {
+  color: red;
+}
+
+.card-title2::before {
+  content: 'Launch';
+  display: inline-block;
 }
 
 .section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 20px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   margin: auto;

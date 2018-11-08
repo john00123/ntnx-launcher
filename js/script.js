@@ -9,3 +9,7 @@ $(window).scroll(function() {
      $('header').removeClass('scroll');
    }
 });
+
+$('.card-container').hover(function(){
+  $('h3', this).toggleClass('.card-title2')
+});
