@@ -200,22 +200,58 @@ body {
   overflow-x: hidden;
 }
 
+header, .central {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #22272E;
+  color: white;
+  font-weight: 600;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+header svg {
+  height: 16px;
+  width: auto;
+  box-sizing: border-box;
+  fill: #4D5969;
+  margin-right: 10px;
+}
+
+.scroll {
+  transform: translateY(-60px);
+}
+
 .card-container {
   height: auto;
   width: auto;
   box-sizing: border-box;
-  background-color: white;
+  background: white;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   border-radius: 4px;
-  padding: 20px;
+  padding: 30px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card-container p {
   min-height: 60px;
+}
+
+.card-container:hover {
+  box-shadow: 0 9px 9px 0 rgba(0, 0, 0, 0.02), 0 3px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 1px 0 rgba(0, 0, 0, 0.02);
 }
 
 container {
@@ -224,6 +260,7 @@ container {
   grid-gap: 0px;
   margin: auto;
   padding: 20px;
+  margin-top: 60px;
 }
 
 .section-group {
@@ -232,9 +269,17 @@ container {
 
 .card-header {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-header h1 {
+  margin: 10px 0;
+}
+
+.card-title {
+  text-overflow: ellipsis;
 }
 
 .section {

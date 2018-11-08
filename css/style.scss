@@ -16,25 +16,47 @@ body{
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
+}
+header, .central{@include flex(center, center, row);}
+header{
+  @include size(60px, 100%);
+  background-color: $background-color-1;
+  color: white;
+  font-weight: 600;
+  position: fixed;
+  top:0;
+  left: 0;
+  @include transition(all);
+  svg{
+    @include size(16px, auto);
+    fill:$dark-grey-3;
+    margin-right: 10px;
+  }
+}
 
+.scroll{
+  transform: translateY(-60px);
 }
 
 .card-container{
   @include size(auto, auto);
-  background-color: white;
+  background: white;
+
   @include flex(flex-start, center, column);
   border-radius: 4px;
-  padding: 20px;
+  padding: 30px;
   @include transition(all);
   p{
     min-height: 60px;
   }
+  &:hover{@include shadow();}
 }
 
 container{
   @include grid(auto, 1020px, 0px);
   margin: auto;
   padding: 20px;
+  margin-top: 60px;
 }
 
 .section-group{
@@ -42,7 +64,12 @@ container{
 }
 
 .card-header{
-  @include flex(flex-start, space-between, row);
+  @include flex(center, center, column);
+  h1{margin: 10px 0;}
+}
+
+.card-title{
+  text-overflow: ellipsis;
 }
 
 .section{

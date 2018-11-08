@@ -93,9 +93,9 @@ function cardBlock(name, value, description, state, icon){
   return(`
     <div class='card-container ${state}'>
       <div class='card-header fw'>
-        <h1 class='card-title card${value}'>${name}</h1>
-        ${icon > 0 ? `<img src='../img/icon${name} class='icon${value}'/>` :
-        `<div class='no-icon'></div>`}
+        <h2 class='card-title card${value}'>${name}</h2>
+        ${icon > 0 ? `<img style='height:40px' src='../img/icon${name}.svg' class='icon${value}'/>` :
+        `<img style='height:40px' src='../img/iconEmpty.svg' class='icon${value}'/>`}
 
       </div>
 
@@ -112,7 +112,7 @@ function cardBlock(name, value, description, state, icon){
 function card(e){
   $('container').prepend(`
     <div class='section-group'>
-      <h4 class='section-title'>${e}</h4>
+      <h3 class='section-title' data-type='alt'>${e}</h3>
       <div class='section ${e}'></div>
     </div>
   `);
