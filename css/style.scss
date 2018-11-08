@@ -64,7 +64,7 @@ container{
 }
 
 .card-header{
-  @include flex(center, center, column);
+  @include flex(flex-start, space-between, row);
   h1{margin: 10px 0;}
 }
 
