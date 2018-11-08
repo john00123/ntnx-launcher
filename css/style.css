@@ -256,8 +256,8 @@ header svg {
 
 container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 1280px));
-  grid-gap: 0px;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 980px));
+  grid-gap: 10px;
   margin: auto;
   padding: 20px;
   margin-top: 60px;
@@ -284,7 +284,7 @@ container {
 
 .section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-gap: 20px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   margin: auto;
