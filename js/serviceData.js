@@ -36,7 +36,7 @@ const cardData= [{
 {
   name:'Test Drive',
   value:'6',
-  icon:'0',
+  icon:'1',
   description: 'Try out Xi on GCP to learn more about Cloud Services',
   state:'Active',
   section:'Services'},
