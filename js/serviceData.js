@@ -1,40 +1,40 @@
 const cardData= [{
-  name:'Leap',
+  name:'Xi Leap',
   value:'1',
   icon:'1',
   description: 'Disaster Recovery Serive to protect applications running on Nutanix',
   state:'Active',
   section:'Services'},
 {
-  name:'IoT',
+  name:'Xi IoT',
   value:'2',
   icon:'1',
   description: 'Cloud based PaaS running on the edge to support Event-Driven Apps',
   state:'Active',
   section:'Services'},
 {
-  name:'Frame',
+  name:'Xi Frame',
   value:'3',
   icon:'1',
   description: 'Desktop-as-a-service platform for Cloud Deployment',
   state:'Active',
   section:'Services'},
 {
-  name:'Epoch',
+  name:'Xi Epoch',
   value:'4',
   icon:'1',
   description: 'Observability and Monitoring for Multi-Cloud Applications',
   state:'Inactive',
   section:'Services'},
 {
-  name:'Beam',
+  name:'Xi Beam',
   value:'5',
   icon:'1',
   description: 'Multi-Cloud Optimization to Reduce Cost & Enhance Cloud Security.',
   state:'Inactive',
   section:'Services'},
 {
-  name:'Test Drive',
+  name:'Xi Test Drive',
   value:'6',
   icon:'1',
   description: 'Try out Xi on GCP to learn more about Cloud Services',
@@ -102,7 +102,7 @@ function cardBlock(name, value, description, state, icon){
 
         <p data-type='alt'>${description}</p>
         ${state === 'Active' ? `<button class='primary fw'>Launch</button>`:
-          `<button class='secondary fw'>Activate</button>`
+          `<button class='secondary fw'>Start Trial</button>`
         }
   </div>
   `)
