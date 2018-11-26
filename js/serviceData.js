@@ -102,7 +102,8 @@ function cardBlock(name, value, description, state, icon){
 
         <p data-type='alt'>${description}</p>
         ${state === 'Active' ? `<button class='primary fw'>Launch</button>`:
-          `<button class='secondary fw'>Start Trial</button>`
+          `<button class='secondary fw'>Start Trial
+          </button>`
         }
   </div>
   `)
