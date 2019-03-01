@@ -111,7 +111,7 @@ function cardBlock(name, value, description, state, icon){
 
 
 function card(e){
-  $('container').prepend(`
+  $('container').append(`
     <div class='section-group'>
       <h3 class='section-title' data-type='alt'>${e}</h3>
       <div class='section ${e}'></div>

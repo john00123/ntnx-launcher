@@ -1,9 +1,12 @@
 //Comment for compiler
 @import '../../_ntnx/variables';
 @import '../../_ntnx/mixins';
+@import 'base';
+
 html{
-  @include base;
   background-color: $background-color-3;
+  overflow-y: scroll;
+  padding-bottom: 20px;
 }
 
 .primary{ @include primary }
@@ -16,6 +19,7 @@ body{
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
+
 }
 header, .central{@include flex(center, center, row);}
 header{
@@ -39,6 +43,41 @@ header{
   transform: translateY(-60px);
 }
 
+.promotion{
+  @include size(320px, 100%);
+  padding: 30px;
+  @include flex( center, space-between, row);
+  background: url('../img/general.svg');
+  background-size: auto 320px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  background-color: white;
+
+  position: relative;
+  img{
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::after{
+    content: '';
+    background-color: #FBBD13;
+    height: 600px;
+    border-radius: 100pc;
+    transform: translate(-50%, -40%);
+    width: 600px;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    left: 0;
+  }
+  overflow: hidden;
+}
+
 .card-container{
   @include size(auto, auto);
   background: white;
@@ -58,6 +97,7 @@ container{
   margin: auto;
   padding: 20px;
   margin-top: 60px;
+
 }
 
 .section-group{

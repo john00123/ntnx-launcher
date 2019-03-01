@@ -1,0 +1,55 @@
+//main:style.scss
+
+* { @include font }
+*{
+  text-rendering:geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+  @include inputStyle;
+  overflow:   hidden ;
+  background: $background-color-3;
+}
+
+//core attributes
+[fw]        { width: 100%           }
+[ac]        { align-self: center    }
+[alt ]      { color: $font-color-2  }
+[fade]      { color: $border-color-1}
+[primary  ] { @include primary      }
+[secondary] { @include secondary    }
+[label]{
+  background: $semi-white-blue;
+  padding: 2px 5px;
+  border-radius: 2px;
+  color: $dark-blue-3;
+}
+
+//alignment
+[hc] { @include flex(center, center, row)       }
+[hcs]{ @include flex(center, flex-start, row)   }
+[hsc]{ @include flex(flex-start, center, row)   }
+[hsd]{ @include flex(flex-start, space-between, row)}
+[hcd]{ @include flex(center, space-between, row)}
+[vcs]{ @include flex(center, flex-start, column)}
+[vss] { @include flex(flex-start, flex-start, column)}
+[vsc] { @include flex(flex-start, center, column)}
+[vc]{ @include flex(center, center, column)}
+
+//font
+h1{font:$h1}
+h2{font:$h2}
+h3{font:$h3}
+h4{font:$h4}
+p {font:$p }
+a {@include link}
+
+//basic styling
+hr{
+  height: 1px ;
+  border: none;
+  width : 100%;
+  background: $border-color-3;
+}
